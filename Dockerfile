@@ -1,4 +1,4 @@
-FROM rockylinux/rockylinux:latest
+FROM rockylinux/rockylinux:8
 
 LABEL maintainer="Dimitri Tarassenko <mitka@mitka.us>"
 
@@ -15,18 +15,17 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
     rm -f /lib/systemd/system/basic.target.wants/*;\
     rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-# FFMPEG and a few fonts
+# FFMPEG and a few fonts, TSDuck, then clean up
 RUN dnf -y install --nogpgcheck dnf-plugins-core https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm \
         https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm; \
     dnf -y config-manager --enable powertools; \
-    dnf -y install ffmpeg dejavu-sans-mono-fonts ;
-
-# TSDuck
-RUN dnf -y install https://github.com/tsduck/tsduck/releases/download/v3.29-2651/tsduck-3.29-2651.el8.x86_64.rpm
+    dnf -y install ffmpeg dejavu-sans-mono-fonts \
+        https://github.com/tsduck/tsduck/releases/download/v3.29-2651/tsduck-3.29-2651.el8.x86_64.rpm; \
+    dnf -y update; \
+    dnf clean all
 
 # Tune-ups, clean up
 RUN ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
-RUN dnf -y update; dnf clean all
 
 # Ensure the termination happens on container stop, cgroup, starting init
 STOPSIGNAL SIGRTMIN+3 
