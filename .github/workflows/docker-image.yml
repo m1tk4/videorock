@@ -1,8 +1,15 @@
+# See https://github.com/docker/metadata-action#semver for details how this works
+
 name: Docker Image Build and Push
 
 on:
+
   push:
     branches: [ main ]
+    tags: [ 'v*' ]
+
+  pull_request:
+    branches:  [ main ]
 
 env:
   REGISTRY: ghcr.io
