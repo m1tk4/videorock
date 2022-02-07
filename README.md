@@ -16,3 +16,10 @@ FROM ghcr.io/m1tk4/videorock:latest
 ```
 
 at the top of your `Dockerfile` to build on top of this.
+
+Note that `:latest` is the last **tagged release**, not the last commit in Github repo. To
+get the last available version, use:
+
+```dockerfile
+FROM ghcr.io/m1tk4/videorock:main
+```
