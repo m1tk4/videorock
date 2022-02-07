@@ -6,3 +6,13 @@ Rocky Linux container with systemd wrapper and a collection of video related too
 - ffMPEG
 - monospaced DejaVu fonts
 - TSDuck
+
+## Usage
+
+This image is useful as a base building block for other containers. Add
+
+```dockerfile
+FROM ghcr.io/m1tk4/videorock:latest
+```
+
+at the top of your `Dockerfile` to build on top of this.
