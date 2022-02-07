@@ -1,5 +1,7 @@
 # videorock
 
-Rocky Linux container with collection of video related tools
+Rocky Linux container with systemd wrapper and a collection of video related tools:
 
-Ho!
+- ffMPEG
+- monospaced DejaVu fonts
+- TSDuck
