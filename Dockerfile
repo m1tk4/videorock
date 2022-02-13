@@ -20,7 +20,7 @@ RUN dnf -y install --nogpgcheck dnf-plugins-core https://dl.fedoraproject.org/pu
         https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-8.noarch.rpm; \
     dnf -y config-manager --enable powertools; \
     dnf -y install ffmpeg dejavu-sans-mono-fonts \
-        https://github.com/tsduck/tsduck/releases/download/v3.29-2651/tsduck-3.29-2651.el8.x86_64.rpm; \
+        https://github.com/tsduck/tsduck/releases/download/v3.29-2651/tsduck-3.29-2651.el8.x86_64.rpm \
         https://github.com/m1tk4/video-gadgets/releases/download/v1.0.0/video-gadgets-1.0.0.noarch.rpm; \
     dnf -y update; \
     dnf clean all
