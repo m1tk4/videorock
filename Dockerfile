@@ -21,7 +21,7 @@ RUN dnf -y install --nogpgcheck dnf-plugins-core https://dl.fedoraproject.org/pu
     dnf -y config-manager --enable powertools; \
     dnf -y install dejavu-sans-mono-fonts \
         https://github.com/tsduck/tsduck/releases/download/v3.29-2651/tsduck-3.29-2651.el8.x86_64.rpm; \
-    dnf -y install https://github.com/m1tk4/video-gadgets/releases/download/v1.0.0/video-gadgets-1.0.0.noarch.rpm; \
+    dnf -y install https://github.com/m1tk4/video-gadgets/releases/download/v1.3.0/video-gadgets-1.3.0.noarch.rpm; \
     dnf install -y \
         https://github.com/m1tk4/ffmpeg-rpm/releases/download/latest/ffmpeg-5.0.0.x86_64.rpm \
         https://github.com/m1tk4/ffmpeg-rpm/releases/download/latest/ffmpeg-libs-5.0.0.x86_64.rpm \ 
