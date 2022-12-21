@@ -1,7 +1,7 @@
 # videorock
 [![Docker Image CI](https://github.com/m1tk4/videorock/actions/workflows/docker-image.yml/badge.svg)](https://github.com/m1tk4/videorock/actions/workflows/docker-image.yml)
 
-Rocky Linux 8 container with systemd wrapper and a collection of video related tools:
+Rocky Linux 9 container with systemd wrapper and a collection of video related tools:
 
 - ffMPEG
 - monospaced DejaVu fonts
@@ -23,3 +23,12 @@ get the last available version, use:
 ```dockerfile
 FROM ghcr.io/m1tk4/videorock:main
 ```
+
+Starting from version 9 the containers are using the latest Rocky 9.x release. If you need a specific Rocky release here is the reference:
+
+| Rocky Release | videorock Release |
+|---------------|-------------------|
+|9.1|9.1.x|
+|8.5|2.3|
+
+
