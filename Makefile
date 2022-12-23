@@ -2,17 +2,17 @@ IMAGE=m1tk4/videorock
 TESTCTR=videorock-test
 
 build:
-	docker build --pull --rm --tag $(IMAGE) .
+	podman build --pull --rm --tag $(IMAGE) .
 
 clean:
-	-docker image rm --force $(IMAGE)
-	-docker image prune --force
-	-docker container prune --force
+	-podman image rm --force $(IMAGE)
+	-podman image prune --force
+	-podman container prune --force
 
 run:
-	-docker stop $(TESTCTR)
-	-docker container rm $(TESTCTR)
-	docker run -ti --tmpfs /tmp --tmpfs /run --volume /sys/fs/cgroup:/sys/fs/cgroup:ro --name $(TESTCTR) $(IMAGE) /bin/bash
+	-podman stop --ignore $(TESTCTR)
+	-podman container rm --force --ignore $(TESTCTR)
+	podman run -ti --tmpfs /tmp --tmpfs /run --name $(TESTCTR) $(IMAGE)
 
 push:
-	docker push $(IMAGE)
+	podman push $(IMAGE)
