@@ -3,9 +3,10 @@
 
 Rocky Linux 9 container with systemd wrapper and a collection of video related tools:
 
-- ffMPEG
+- [ffMPEG](https:/ffmpeg.org)
 - monospaced DejaVu fonts
-- TSDuck
+- [MistServer](https://www.mistserver.org)
+- [TSDuck](https://tsduck.io)
 
 ## Usage
 

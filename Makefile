@@ -12,7 +12,7 @@ clean:
 run:
 	-podman stop --ignore $(TESTCTR)
 	-podman container rm --force --ignore $(TESTCTR)
-	podman run -ti --tmpfs /tmp --tmpfs /run --name $(TESTCTR) $(IMAGE)
+	podman run -ti --tmpfs /tmp --tmpfs /run --network host --name $(TESTCTR) $(IMAGE)
 
 push:
 	podman push $(IMAGE)
