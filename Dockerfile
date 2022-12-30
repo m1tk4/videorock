@@ -14,8 +14,8 @@ RUN dnf -y install 'dnf-command(config-manager)'; \
         https://github.com/tsduck/tsduck/releases/download/v3.32-2983/tsduck-3.32-2983.el9.x86_64.rpm \
         ffmpeg \
         https://github.com/m1tk4/video-gadgets/releases/download/v1.4.1/video-gadgets-1.4.1.noarch.rpm \
-        https://github.com/m1tk4/mistserver/releases/download/v3.1.76/mistserver-3.1.76-eef66d94.el9.x86_64.rpm \
-        https://github.com/m1tk4/mistserver/releases/download/v3.1.76/mistserver-in-av-3.1.76-eef66d94.el9.x86_64.rpm; \
+        https://github.com/m1tk4/mistserver/releases/download/v3.1.79/mistserver-3.1.79-70b46aaf.el9.x86_64.rpm \
+        https://github.com/m1tk4/mistserver/releases/download/v3.1.79/mistserver-in-av-3.1.79-70b46aaf.el9.x86_64.rpm; \
     dnf clean all
 
 # Tune-ups, clean up
