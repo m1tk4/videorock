@@ -1,4 +1,4 @@
-FROM docker.io/rockylinux/rockylinux:9.1
+FROM docker.io/rockylinux/rockylinux:9.2
 
 LABEL maintainer="Dimitri Tarassenko <mitka@mitka.us>"
 
@@ -11,11 +11,11 @@ RUN dnf -y install 'dnf-command(config-manager)'; \
         https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm; \
     dnf -y install \
         dejavu-sans-mono-fonts \
-        https://github.com/tsduck/tsduck/releases/download/v3.32-2983/tsduck-3.32-2983.el9.x86_64.rpm \
+        https://github.com/tsduck/tsduck/releases/download/v3.35-3258/tsduck-3.35-3258.el9.x86_64.rpm \
         ffmpeg \
         https://github.com/m1tk4/video-gadgets/releases/download/v1.4.1/video-gadgets-1.4.1.noarch.rpm \
-        https://github.com/m1tk4/mistserver/releases/download/v3.2.1/mistserver-3.2.1-ea15d738.el9.x86_64.rpm \
-        https://github.com/m1tk4/mistserver/releases/download/v3.2.1/mistserver-in-av-3.2.1-ea15d738.el9.x86_64.rpm; \
+        https://github.com/m1tk4/mistserver/releases/download/v3.2.3/mistserver-3.2.3-efe1beb8.el9.x86_64.rpm \
+        https://github.com/m1tk4/mistserver/releases/download/v3.2.3/mistserver-in-av-3.2.3-efe1beb8.el9.x86_64.rpm; \
     dnf clean all
 
 # Tune-ups, clean up
