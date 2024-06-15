@@ -29,6 +29,7 @@ Starting from version 9 the containers are using the latest Rocky 9.x release. I
 
 | Rocky Release | videorock Release |
 |---------------|-------------------|
+|9.3|9.3.x|
 |9.2|9.2.x|
 |9.1|9.1.x|
 |8.5|2.3|
